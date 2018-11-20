@@ -1,0 +1,39 @@
+digraph docWho{
+
+node [shape=box]; sector [fillcolor="red", style="filled"];
+node [shape=oval]; web_developing  [fillcolor="yellow", style="filled"]; data_mining  [fillcolor="yellow", style="filled"]; machine_learning  [fillcolor="yellow", style="filled"]; cyber_security  [fillcolor="yellow", style="filled"];
+node [shape=circle]; php,js,python,ruby_on_rail;
+node [shape=circle]; python;R;matlab;
+node [shape=circle]; mysql,mongo,firebase,oracle,sql_server;
+node [shape=circle]; laravel,angular,vue,wordpress,django_flask;
+node [shape=box];language;
+node [shape=box];database;
+node [shape=box];framework;
+sector->web_developing;
+sector->data_mining;
+sector->machine_learning;
+sector->cyber_security;
+web_developing->language [dir=none];
+web_developing->database[dir=none];
+web_developing->framework[dir=none];
+language->php [label="serverside", color="green"];
+language->js [label="frontend", color="green"];
+language->python [label="backend", color="magenta"];
+language->ruby_on_rail [label="serverside", color="magenta"];
+database->mysql  [color="green"];
+database->mongo [color="green"];
+database->firebase [color="green"];
+database->oracle [color="magenta"];
+database->sql_server [color="magenta"];
+framework->laravel [label="php", color="green"];
+framework->angular [label="js", color="green"];
+framework->vue [label="js", color="green"];
+framework->wordpress [label="php", color="green"];
+framework->django_flask [label="python", color="magenta"];
+data_mining->python  [color="green"];
+data_mining->R [color="magenta"];
+data_mining->matlab [color="magenta"];
+machine_learning->python [color="green"];
+machine_learning->R [color="magenta"];
+
+}
